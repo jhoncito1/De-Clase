@@ -127,6 +127,18 @@ values
 ('409',19,'lo quiere todo','1:33:00','disfruta aun puedes','302'),
 ('410',20,'es claro en todo','1:34:00','ama y moriras feliz','302');
 
+insert into perfil_peliculas
+values
+('1','101'),
+('2','102'),
+('3','103');
+
+insert into perfil_series
+values
+('1','201'),
+('2','202'),
+('3','203');
+
 insert into series_idioma
 values
 ('001', '201'),
@@ -134,6 +146,14 @@ values
 ('003', '203'),
 ('004', '204'),
 ('005', '205');
+
+insert into peliculas_idioma
+values
+('001', '101'),
+('002', '102'),
+('003', '103'),
+('004', '104'),
+('005', '105');
 
 
 
