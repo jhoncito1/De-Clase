@@ -156,7 +156,7 @@ values
 ('005', '105');
 
 
-
+-- ---- Consultas------
 /*
 select * from tipo_documento;
 select * from rol;
