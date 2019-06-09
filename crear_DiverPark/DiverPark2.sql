@@ -194,3 +194,23 @@ ALTER TABLE tipo_pago ADD constraint FOREIGN KEY (fk_id_giro)REFERENCES giro_emp
 -- envio definen las  llaves primaria y foranea de la tabla
 ALTER TABLE envio ADD constraint FOREIGN KEY (fk_id_factura)REFERENCES factura(id_factura);
 
+-- Inserción de datos tabla tipo_documento
+
+insert into tipo_documento (id_documento, siglas, nombre_tipo_doc)
+values (1, 'cedula de ciudadania', 'cc'),
+(2, 'cedula de extranjeria', 'ce'),
+(3, 'numero de identificacion tributaria', 'nit'),
+(4, 'tarjeta pasaporte', 'tp');
+
+
+-- Inserción de datos tabla usuario
+
+insert into rol (id_rol, nombre_rol, descripcion)
+values (5, 'administrador', 'el administrador podra crear, eliminar o modificar ya sean productos, servicios o usuarios'),
+(6, 'cliente', 'el cliente podra visualizar productos crear su usuario, modificarlo o cancelar su cuenta y podra adquirir los productos y servicios ofrecidos por la empresa'),
+(7, 'visitante', 'el visitante podra solo visualizar los productos y servicios');
+
+-- Inserción de datos tabla usuario
+
+insert into usuario (numero_documento, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, departamento, ciudad, direccion, email, contraseña, telefono, fk_id_rol, fk_id_documento, fk_id_producto)
+values (6, 'nicole', 'camila', 'ramirez', 'montero', 'cundinamarca', 'zipaquira', 'cra. 79# 57-86', 'ncamila@gmail.com', '12345', 7584956)
