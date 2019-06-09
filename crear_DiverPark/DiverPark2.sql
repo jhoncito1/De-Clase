@@ -8,9 +8,12 @@ create table usuario
     segundo_nombre varchar(25),
     primer_apellido varchar(25) not null,
     segundo_apellido varchar(25),
-    email VARCHAR (30) unique  not null,
+    departamento varchar(25)not null,
+    ciudad varchar (25) not null,
+    direccion varchar(25) not null,
+    email VARCHAR (30) unique not null,
+    contraseña VARCHAR(15) not null,
     telefono bigint,
-    contraseña VARCHAR(15),
     fk_id_rol VARCHAR (10),
     fk_id_documento VARCHAR(10),
     fk_id_producto int
@@ -37,7 +40,7 @@ create table tipo_producto
     nombre_producto varchar (25) not null,
     tamaño varchar(30) not null,
     descripcion varchar(50) not null,
-    precio int not null,
+    precio float not null,
     fk_id_numero_documento varchar (25),
     fk2_id_documento varchar (10)
     );
@@ -47,7 +50,11 @@ create table tipo_producto
 (
 	id_servicio int primary key,
     nombre_servicio varchar (25) not null,
+	fecha date not null,
+    direccion varchar (25) not null,
+	observacion varchar (50),
     fk_id_producto int
+    
 );
 
 create table factura
@@ -56,9 +63,10 @@ create table factura
     cod_producto varchar (10) not null,
     nombre_producto varchar (30) not null,
     cantidad_uds int not null,
-    valor_unidad int not null ,
-    iva_unidad int not null,
-    total bigint not null,
+    valor_unidad float  not null, 
+    iva_unidad float  not null, 
+    sub_total float  not null, 
+    total float  not null, 
     fecha datetime not null,
 	fk_id_tpago varchar (10),
     fk_id_producto int
@@ -72,7 +80,7 @@ create table tipo_pago
     fk_id_plan VARCHAR(10),
 	fk_id_tarjeta_c VARCHAR(10),
     fk_id_tarjeta_d VARCHAR(10),
-    fk_id_efectivo VARCHAR(10)
+    fk_id_giro VARCHAR(10)
 );
 
 create table tarjeta_credito
@@ -80,7 +88,9 @@ create table tarjeta_credito
     id_tarjeta_c VARCHAR(10),
     nombre VARCHAR(25) not null,
     apellido VARCHAR(25)  not null,
+    nombre_banco varchar (25) not null,
     numero_de_tarjeta BIGINT not null,
+    codigo_seguridad int not null,
     fecha_vencimiento date not null
 );
 
@@ -89,15 +99,20 @@ create table tarjeta_debito
     id_tarjeta_d VARCHAR(10),
     nombre VARCHAR(25) not null,
     apellido VARCHAR(25) not null,
+    nombre_banco varchar (25) not null,
     numero_de_tarjeta BIGINT not null,
+    codigo_seguridad int not null,
     fecha_vencimiento date not null
 );
 
-create table efectivo
+create table giro_empresarial
 (
-    id_efectivo VARCHAR (10),
-    numero_celular BIGINT not null,    
-    valor_recarga BIGINT not null
+    id_giro VARCHAR (10),
+    nombre_titular varchar (25)not null,
+    apellido_titular varchar (25)not null,
+    documento_titular varchar (25)not null,
+    numero_telefono BIGINT not null,    
+    valor_giro BIGINT not null
 );
 
 
@@ -110,7 +125,7 @@ create table envio
 );
 
 
-create table instalacion_parque 
+/*create table instalacion_parque 
 (
 	id_instalacion int auto_increment primary key,
     fecha_instalacion date not null,
@@ -126,7 +141,7 @@ create table mantenimiento_parque
     direccion_paruqe varchar (25) not null,
 	observacion varchar (50),
 	fk_id_servicio  int 
-);
+);*/
 
 create table error 
 (
@@ -173,14 +188,9 @@ ALTER TABLE tarjeta_debito ADD primary key (id_tarjeta_d);
 ALTER TABLE tipo_pago ADD constraint FOREIGN KEY (fk_id_tarjeta_d)REFERENCES tarjeta_debito (id_tarjeta_d);
 
 -- efectivo definen las  llaves primaria y foranea de la tabla
-ALTER TABLE efectivo ADD primary key (id_efectivo);
-ALTER TABLE tipo_pago ADD constraint FOREIGN KEY (fk_id_efectivo)REFERENCES efectivo(id_efectivo);
+ALTER TABLE giro_empresarial ADD primary key (id_giro);
+ALTER TABLE tipo_pago ADD constraint FOREIGN KEY (fk_id_giro)REFERENCES giro_empresarial(id_giro);
 
 -- envio definen las  llaves primaria y foranea de la tabla
 ALTER TABLE envio ADD constraint FOREIGN KEY (fk_id_factura)REFERENCES factura(id_factura);
 
--- instalacion_parque definen las  llaves primaria y foranea de la tabla
-ALTER TABLE instalacion_parque ADD constraint FOREIGN KEY (fk_id_servicio)REFERENCES servicio (id_servicio);
-
--- instalacion_parque definen las  llaves primaria y foranea de la tabla
-ALTER TABLE mantenimiento_parque ADD constraint FOREIGN KEY (fk_id_servicio)REFERENCES servicio (id_servicio);
