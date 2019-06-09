@@ -13,7 +13,7 @@ create table usuario
     contraseña VARCHAR(15),
     fk_id_rol VARCHAR (10),
     fk_id_documento VARCHAR(10),
-    fk_id_plan VARCHAR(10)
+    fk_id_parque int
 );
 
 create table tipo_documento
@@ -26,14 +26,36 @@ create table tipo_documento
 create table rol
 (
     id_rol VARCHAR(10),
-    nombre_rol VARCHAR (25)  not null
+    nombre_rol VARCHAR (25)  not null,
+    descripcion varchar(50)
 );
 
+create table parques 
+(
+	id_parque int primary key,
+    nombre_parque varchar (25) not null,
+    tamaño varchar(30) not null,
+    descripcion varchar(50) not null,
+    precio int not null
+    );
+
+create table factura
+(
+	id_factura int auto_increment primary key,
+    cod_producto varchar (10) not null,
+    nombre_producto varchar (30) not null,
+    cantidad_uds int not null,
+    valor_unidad int not null ,
+    iva_unidad int not null,
+    total bigint not null,
+    fecha datetime not null,
+	fk_id_tpago varchar (10)
+);
 
 
 create table tipo_pago
 (
-    id_tpago VARCHAR (10),
+    id_tpago VARCHAR (10) primary key,
     nombre_tipo_pago VARCHAR(30)  not null,
     fk_id_plan VARCHAR(10)
 );
@@ -67,11 +89,46 @@ create table efectivo
 );
 
 
+create table envio
+(
+	id_envio int auto_increment primary key,
+    direccion_envio varchar (30) not null,
+    fecha_envio date not null,
+    fk_id_factura int
+);
 
 
+create table instalacion_parque 
+(
+	id_instalacion int auto_increment primary key,
+    fecha_instalacion date not null,
+    direccion_instalacion varchar (25) not null,
+	observacion varchar (50),
+    fk_id_envio int
+);
+
+create table mantenimiento_parque 
+(
+	id_mantenimiento int auto_increment primary key,
+    fecha_mantenimiento date not null,
+    direccion_paruqe varchar (25) not null,
+	observacion varchar (50),
+    fk_id_instalacion int 
+);
+
+create table error 
+(
+	id_error varchar(10),
+    nombre_error varchar (20),
+	descripcion varchar (10)
+);
 
 
-
+create table servidor_correo
+(
+	id_serv_correo varchar (10),
+    nombre_serv_correo varchar (30)
+);
 
 -- =================== AGREGAR LLAVES PRIMARIAS FORANEAS Y RELACIONES================
 
@@ -84,9 +141,12 @@ ALTER TABLE usuario ADD primary key (numero_documento, fk_id_documento);
 ALTER TABLE rol ADD primary key (id_rol);
 ALTER TABLE usuario ADD constraint FOREIGN KEY (fk_id_rol)REFERENCES rol(id_rol);
 
+-- parque - usuario  definen las  llaves primaria y foranea de la tabla 
+alter table usuario add constraint foreign key (fk_id_parque) references parques(id_parque);
 
--- ALTER TABLE tipo_pago ADD constraint FOREIGN KEY (fk2_id_plan)REFERENCES plan(id_plan);
-ALTER TABLE tipo_pago ADD primary key (id_tpago);
+-- tipo_pago- factura  definen las  llaves primaria y foranea de la tabla 
+alter table factura add constraint foreign key (fk_id_tpago) references tipo_pago (id_tpago);
+
 
 -- tarjeta_credito  definen las  llaves primaria y foranea de la tabla 
 ALTER TABLE tarjeta_credito ADD primary key (id_tarjeta_c);
@@ -99,4 +159,13 @@ ALTER TABLE tarjeta_debito ADD constraint FOREIGN KEY (fk_id_tpago)REFERENCES ti
 -- efectivo definen las  llaves primaria y foranea de la tabla
 ALTER TABLE efectivo ADD primary key (id_efectivo);
 ALTER TABLE efectivo ADD constraint FOREIGN KEY (fk_id_tpago)REFERENCES tipo_pago(id_tpago);
+
+-- envio definen las  llaves primaria y foranea de la tabla
+ALTER TABLE envio ADD constraint FOREIGN KEY (fk_id_factura)REFERENCES factura(id_factura);
+
+-- instalacion_parque definen las  llaves primaria y foranea de la tabla
+ALTER TABLE instalacion_parque ADD constraint FOREIGN KEY (fk_id_envio)REFERENCES envio (id_envio);
+
+-- instalacion_parque definen las  llaves primaria y foranea de la tabla
+ALTER TABLE mantenimiento_parque ADD constraint FOREIGN KEY (fk_id_instalacion)REFERENCES instalacion_parque(id_instalacion);
 
