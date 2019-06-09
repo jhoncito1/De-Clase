@@ -1,4 +1,4 @@
--- drop database diverpark;
+## drop database diverpark;
 create database diverpark;
 use diverpark;
 create table usuario
@@ -19,8 +19,8 @@ create table usuario
 create table tipo_documento
 (
     id_documento VARCHAR(10),
-    nombre_tipo_doc VARCHAR(30)  not null,
-    siglas VARCHAR(5)  not null
+	siglas VARCHAR(5)  not null,
+	nombre_tipo_doc VARCHAR(30)  not null
 );
 
 create table rol
@@ -41,6 +41,14 @@ create table tipo_producto
     fk_id_numero_documento varchar (25),
     fk2_id_documento varchar (10)
     );
+    
+    
+    create table servicio
+(
+	id_servicio int primary key,
+    nombre_servicio varchar (25) not null,
+    fk_id_producto int
+);
 
 create table factura
 (
@@ -61,7 +69,10 @@ create table tipo_pago
 (
     id_tpago VARCHAR (10) primary key,
     nombre_tipo_pago VARCHAR(30)  not null,
-    fk_id_plan VARCHAR(10)
+    fk_id_plan VARCHAR(10),
+	fk_id_tarjeta_c VARCHAR(10),
+    fk_id_tarjeta_d VARCHAR(10),
+    fk_id_efectivo VARCHAR(10)
 );
 
 create table tarjeta_credito
@@ -70,8 +81,7 @@ create table tarjeta_credito
     nombre VARCHAR(25) not null,
     apellido VARCHAR(25)  not null,
     numero_de_tarjeta BIGINT not null,
-    fecha_vencimiento date,
-    fk_id_tpago VARCHAR (10)
+    fecha_vencimiento date not null
 );
 
 create table tarjeta_debito
@@ -80,16 +90,14 @@ create table tarjeta_debito
     nombre VARCHAR(25) not null,
     apellido VARCHAR(25) not null,
     numero_de_tarjeta BIGINT not null,
-    fecha_vencimiento date,
-    fk_id_tpago VARCHAR (10)
+    fecha_vencimiento date not null
 );
 
 create table efectivo
 (
     id_efectivo VARCHAR (10),
     numero_celular BIGINT not null,    
-    valor_recarga BIGINT not null,    
-    fk_id_tpago VARCHAR (10)
+    valor_recarga BIGINT not null
 );
 
 
@@ -108,7 +116,7 @@ create table instalacion_parque
     fecha_instalacion date not null,
     direccion_instalacion varchar (25) not null,
 	observacion varchar (50),
-    fk_id_envio int
+    fk_id_servicio int
 );
 
 create table mantenimiento_parque 
@@ -117,7 +125,7 @@ create table mantenimiento_parque
     fecha_mantenimiento date not null,
     direccion_paruqe varchar (25) not null,
 	observacion varchar (50),
-    fk_id_instalacion int 
+	fk_id_servicio  int 
 );
 
 create table error 
@@ -146,9 +154,11 @@ ALTER TABLE rol ADD primary key (id_rol);
 ALTER TABLE usuario ADD constraint FOREIGN KEY (fk_id_rol)REFERENCES rol(id_rol);
 
 -- parque - usuario  definen las  llaves primaria y foranea de la tabla 
-alter table usuario add constraint foreign key (fk_id_producto) references tipo_producto(id_producto);
+alter table tipo_producto  add constraint foreign key (fk_id_numero_documento,fk2_id_documento ) references usuario(numero_documento,fk_id_documento );
 
 alter table factura add constraint foreign key (fk_id_producto) references tipo_producto(id_producto);
+
+alter table servicio add constraint foreign key (fk_id_producto) references tipo_producto(id_producto);
 
 -- tipo_pago- factura  definen las  llaves primaria y foranea de la tabla 
 alter table factura add constraint foreign key (fk_id_tpago) references tipo_pago (id_tpago);
@@ -156,22 +166,21 @@ alter table factura add constraint foreign key (fk_id_tpago) references tipo_pag
 
 -- tarjeta_credito  definen las  llaves primaria y foranea de la tabla 
 ALTER TABLE tarjeta_credito ADD primary key (id_tarjeta_c);
-ALTER TABLE tarjeta_credito ADD constraint FOREIGN KEY (fk_id_tpago)REFERENCES tipo_pago(id_tpago);
+ALTER TABLE tipo_pago ADD constraint FOREIGN KEY (fk_id_tarjeta_c)REFERENCES tarjeta_credito(id_tarjeta_c);
 
 -- tarjeta_debito definen las  llaves primaria y foranea de la tabla
 ALTER TABLE tarjeta_debito ADD primary key (id_tarjeta_d);
-ALTER TABLE tarjeta_debito ADD constraint FOREIGN KEY (fk_id_tpago)REFERENCES tipo_pago(id_tpago);
+ALTER TABLE tipo_pago ADD constraint FOREIGN KEY (fk_id_tarjeta_d)REFERENCES tarjeta_debito (id_tarjeta_d);
 
 -- efectivo definen las  llaves primaria y foranea de la tabla
 ALTER TABLE efectivo ADD primary key (id_efectivo);
-ALTER TABLE efectivo ADD constraint FOREIGN KEY (fk_id_tpago)REFERENCES tipo_pago(id_tpago);
+ALTER TABLE tipo_pago ADD constraint FOREIGN KEY (fk_id_efectivo)REFERENCES efectivo(id_efectivo);
 
 -- envio definen las  llaves primaria y foranea de la tabla
 ALTER TABLE envio ADD constraint FOREIGN KEY (fk_id_factura)REFERENCES factura(id_factura);
 
 -- instalacion_parque definen las  llaves primaria y foranea de la tabla
-ALTER TABLE instalacion_parque ADD constraint FOREIGN KEY (fk_id_envio)REFERENCES envio (id_envio);
+ALTER TABLE instalacion_parque ADD constraint FOREIGN KEY (fk_id_servicio)REFERENCES servicio (id_servicio);
 
 -- instalacion_parque definen las  llaves primaria y foranea de la tabla
-ALTER TABLE mantenimiento_parque ADD constraint FOREIGN KEY (fk_id_instalacion)REFERENCES instalacion_parque(id_instalacion);
-
+ALTER TABLE mantenimiento_parque ADD constraint FOREIGN KEY (fk_id_servicio)REFERENCES servicio (id_servicio);
