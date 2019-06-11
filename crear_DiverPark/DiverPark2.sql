@@ -32,7 +32,7 @@ create table rol
 (
     id_rol VARCHAR(10),
     nombre_rol VARCHAR (25)  not null,
-    descripcion varchar(50)
+    descripcion varchar(150)
 );
 
 create table tipo_producto

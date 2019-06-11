@@ -54,4 +54,4 @@ values
 ('005', 'gabriela', 'rios','Banco Bancolombia',  463185475, 8675, '2019-04-15');
 
 
-select * from rol;
+select * from rol;   
