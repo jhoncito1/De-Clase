@@ -1,4 +1,4 @@
--- drop database diverpark;
+
 create database diverpark;
 use diverpark;
 
@@ -6,7 +6,7 @@ create table tipo_documento
 (
     id_tipodoc VARCHAR(10),
 	siglas VARCHAR(5)  not null,
-	nombre_tipo_doc VARCHAR(30)  not null
+	nombre_tipo_doc VARCHAR(45)  not null
 );
 
 create table usuario
