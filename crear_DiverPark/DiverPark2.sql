@@ -1,9 +1,18 @@
-## drop database diverpark;
+-- drop database diverpark;
 create database diverpark;
 use diverpark;
+
+create table tipo_documento
+(
+    id_tipodoc VARCHAR(10),
+	siglas VARCHAR(5)  not null,
+	nombre_tipo_doc VARCHAR(30)  not null
+);
+
 create table usuario
 (
     numero_documento varchar(25),
+    fk_id_tipodoc VARCHAR(10),
     primer_nombre varchar(25) not null,
     segundo_nombre varchar(25),
     primer_apellido varchar(25) not null,
@@ -11,19 +20,12 @@ create table usuario
     departamento varchar(25)not null,
     ciudad varchar (25) not null,
     direccion varchar(25) not null,
+    avatar blob,
     email VARCHAR (30) unique not null,
     contraseña VARCHAR(15) not null,
-    telefono bigint,
+    telefono bigint not null,
     fk_id_rol VARCHAR (10),
-    fk_id_documento VARCHAR(10),
     fk_id_producto int
-);
-
-create table tipo_documento
-(
-    id_documento VARCHAR(10),
-	siglas VARCHAR(5)  not null,
-	nombre_tipo_doc VARCHAR(30)  not null
 );
 
 create table rol
@@ -33,16 +35,16 @@ create table rol
     descripcion varchar(50)
 );
 
-
 create table tipo_producto
 (
 	id_producto int primary key,
     nombre_producto varchar (25) not null,
+    imagen_park blob,
     tamaño varchar(30) not null,
     descripcion varchar(50) not null,
     precio float not null,
     fk_id_numero_documento varchar (25),
-    fk2_id_documento varchar (10)
+    fk2_id_tipodoc varchar (10)
     );
     
     
@@ -159,20 +161,22 @@ create table servidor_correo
 
 -- =================== AGREGAR LLAVES PRIMARIAS FORANEAS Y RELACIONES================
 
--- se definen llaves primarias de tipo_documento y usuario, tambien foranea usuario -tipo_ocumento
-ALTER TABLE tipo_documento ADD primary key (id_documento);
-ALTER TABLE usuario ADD constraint FOREIGN KEY (fk_id_documento)REFERENCES tipo_documento(id_documento);
-ALTER TABLE usuario ADD primary key (numero_documento, fk_id_documento);
+-- se definen llaves primarias de tipo_documento y usuario, tambien foranea usuario -tipo_documento
+ALTER TABLE tipo_documento ADD primary key (id_tipodoc);
+ALTER TABLE usuario ADD constraint FOREIGN KEY (fk_id_tipodoc)REFERENCES tipo_documento(id_tipodoc);
+ALTER TABLE usuario ADD primary key (numero_documento, fk_id_tipodoc);
 
 -- rol definen las  llaves primaria y foranea de la tabla 
 ALTER TABLE rol ADD primary key (id_rol);
 ALTER TABLE usuario ADD constraint FOREIGN KEY (fk_id_rol)REFERENCES rol(id_rol);
 
--- parque - usuario  definen las  llaves primaria y foranea de la tabla 
-alter table tipo_producto  add constraint foreign key (fk_id_numero_documento,fk2_id_documento ) references usuario(numero_documento,fk_id_documento );
+--  - tipo_producto   define las  llaves  foraneas de la tabla 
+alter table tipo_producto  add constraint foreign key (fk_id_numero_documento,fk2_id_tipodoc) references usuario(numero_documento,fk_id_tipodoc );
 
+--  - factura - tipo producto  define las  llaves  foraneas de la tabla 
 alter table factura add constraint foreign key (fk_id_producto) references tipo_producto(id_producto);
 
+--  - servicio - tipo producto   define las  llaves  foraneas de la tabla 
 alter table servicio add constraint foreign key (fk_id_producto) references tipo_producto(id_producto);
 
 -- tipo_pago- factura  definen las  llaves primaria y foranea de la tabla 
@@ -194,23 +198,3 @@ ALTER TABLE tipo_pago ADD constraint FOREIGN KEY (fk_id_giro)REFERENCES giro_emp
 -- envio definen las  llaves primaria y foranea de la tabla
 ALTER TABLE envio ADD constraint FOREIGN KEY (fk_id_factura)REFERENCES factura(id_factura);
 
--- Inserción de datos tabla tipo_documento
-
-insert into tipo_documento (id_documento, siglas, nombre_tipo_doc)
-values (1, 'cedula de ciudadania', 'cc'),
-(2, 'cedula de extranjeria', 'ce'),
-(3, 'numero de identificacion tributaria', 'nit'),
-(4, 'tarjeta pasaporte', 'tp');
-
-
--- Inserción de datos tabla usuario
-
-insert into rol (id_rol, nombre_rol, descripcion)
-values (5, 'administrador', 'el administrador podra crear, eliminar o modificar ya sean productos, servicios o usuarios'),
-(6, 'cliente', 'el cliente podra visualizar productos crear su usuario, modificarlo o cancelar su cuenta y podra adquirir los productos y servicios ofrecidos por la empresa'),
-(7, 'visitante', 'el visitante podra solo visualizar los productos y servicios');
-
--- Inserción de datos tabla usuario
-
-insert into usuario (numero_documento, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, departamento, ciudad, direccion, email, contraseña, telefono, fk_id_rol, fk_id_documento, fk_id_producto)
-values (6, 'nicole', 'camila', 'ramirez', 'montero', 'cundinamarca', 'zipaquira', 'cra. 79# 57-86', 'ncamila@gmail.com', '12345', 7584956)
