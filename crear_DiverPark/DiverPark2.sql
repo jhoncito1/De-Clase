@@ -41,7 +41,7 @@ create table tipo_producto
     nombre_producto varchar (25) not null,
     imagen_park blob,
     tamaño varchar(30) not null,
-    descripcion varchar(50) not null,
+    descripcion varchar(100) not null,
     precio float not null,
     fk_id_numero_documento varchar (25),
     fk2_id_tipodoc varchar (10)
@@ -51,12 +51,11 @@ create table tipo_producto
     create table servicio
 (
 	id_servicio int primary key,
-    nombre_servicio varchar (25) not null,
+    nombre_servicio varchar (50) not null,
 	fecha date not null,
     direccion varchar (25) not null,
-	observacion varchar (50),
+	observacion varchar (150),
     fk_id_producto int
-    
 );
 
 create table factura
@@ -70,19 +69,19 @@ create table factura
     sub_total float  not null, 
     total float  not null, 
     fecha datetime not null,
-	fk_id_tpago varchar (10),
+	fk_id_tpago int,
     fk_id_producto int
 );
 
 
 create table tipo_pago
 (
-    id_tpago VARCHAR (10) primary key,
-    nombre_tipo_pago VARCHAR(30)  not null,
-    fk_id_plan VARCHAR(10),
-	fk_id_tarjeta_c VARCHAR(10),
+    id_tpago int primary key,
+    siglas varchar (5),
+    nombre_tipo_pago VARCHAR(30)  not null
+	/*fk_id_tarjeta_c VARCHAR(10),
     fk_id_tarjeta_d VARCHAR(10),
-    fk_id_giro VARCHAR(10)
+    fk_id_giro VARCHAR(10)*/
 );
 
 create table tarjeta_credito
@@ -93,7 +92,8 @@ create table tarjeta_credito
     nombre_banco varchar (25) not null,
     numero_de_tarjeta BIGINT not null,
     codigo_seguridad int not null,
-    fecha_vencimiento date not null
+    fecha_vencimiento date not null,
+    fk_id_tpago int
 );
 
 create table tarjeta_debito
@@ -104,7 +104,8 @@ create table tarjeta_debito
     nombre_banco varchar (25) not null,
     numero_de_tarjeta BIGINT not null,
     codigo_seguridad int not null,
-    fecha_vencimiento date not null
+    fecha_vencimiento date not null,
+    fk_id_tpago int
 );
 
 create table giro_empresarial
@@ -114,7 +115,8 @@ create table giro_empresarial
     apellido_titular varchar (25)not null,
     documento_titular varchar (25)not null,
     numero_telefono BIGINT not null,    
-    valor_giro BIGINT not null
+    valor_giro float not null,
+    fk_id_tpago int
 );
 
 
@@ -185,15 +187,15 @@ alter table factura add constraint foreign key (fk_id_tpago) references tipo_pag
 
 -- tarjeta_credito  definen las  llaves primaria y foranea de la tabla 
 ALTER TABLE tarjeta_credito ADD primary key (id_tarjeta_c);
-ALTER TABLE tipo_pago ADD constraint FOREIGN KEY (fk_id_tarjeta_c)REFERENCES tarjeta_credito(id_tarjeta_c);
+ALTER TABLE tarjeta_credito ADD constraint FOREIGN KEY (fk_id_tpago) references tipo_pago (id_tpago);
 
 -- tarjeta_debito definen las  llaves primaria y foranea de la tabla
 ALTER TABLE tarjeta_debito ADD primary key (id_tarjeta_d);
-ALTER TABLE tipo_pago ADD constraint FOREIGN KEY (fk_id_tarjeta_d)REFERENCES tarjeta_debito (id_tarjeta_d);
+ALTER TABLE tarjeta_debito ADD constraint FOREIGN KEY (fk_id_tpago) references tipo_pago (id_tpago);
 
 -- efectivo definen las  llaves primaria y foranea de la tabla
 ALTER TABLE giro_empresarial ADD primary key (id_giro);
-ALTER TABLE tipo_pago ADD constraint FOREIGN KEY (fk_id_giro)REFERENCES giro_empresarial(id_giro);
+ALTER TABLE giro_empresarial ADD constraint FOREIGN KEY (fk_id_tpago) references tipo_pago (id_tpago);
 
 -- envio definen las  llaves primaria y foranea de la tabla
 ALTER TABLE envio ADD constraint FOREIGN KEY (fk_id_factura)REFERENCES factura(id_factura);
