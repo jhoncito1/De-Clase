@@ -41,39 +41,39 @@ insert into tipo_producto
 values
 (01,'Parques de madera', null, '25 * 5 *8', 'thjuf ebdfbddhgaau cfhhudr', 1.000000,'jng614693', '4'),
 (02,'Parques Metalicos', null, '20 *5 * 5 *8', 'thjuf ebdfbddhgaau cfhhudr', 2.001000,'e-25614965','3'),
-(03,'Parques Biosaludables', null, '10 * 5 *8 *8', 'uygtdfhffdds  vhgfdj  tf de frg jhgu ', 1.000000,'1056825762','2'),
-(04,'Parques publicos', null, '5 * 5 *5 *5', 'thjuf ebdfbddhgaau cfhhudr', 1.465000,'1013654762','2');
+(03,'Parques Biosaludables', null, '10 * 5 *8 *8', 'uygtdfhffdds  vhgfdj  tf de frg jhgu ', 1.000000,'1065789076', '2'),
+(04,'Parques publicos', null, '5 * 5 *5 *5', 'thjuf ebdfbddhgaau cfhhudr', 1.465000,'1013654762','1');
 
 insert into servicio 
 values
-(01, 'instalacion de parques','2019-03-31', 'cra. 21 sur# 67-79',02),
-(02, 'mantenimiento de parques','2019-03-31', 'cra. 21 sur# 67-79',03);
+(01, 'instalacion de parques','2019-03-31', 'cra. 21 sur# 67-79','  ',02),
+(02, 'mantenimiento de parques','2019-03-31', 'cra. 21 sur# 67-79','',03);
 
 insert into tipo_pago
 values
-('01', 'tarjeta credito'),
-('02', 'tarjeta debito'),
-('03', 'giro_empresarial');
+('01','TC', 'tarjeta credito'),
+('02','TC', 'tarjeta debito'),
+('03','GE', 'giro_empresarial');
 
 
 insert into tarjeta_credito
 values 
-('01', 'juan', 'galindo', 'Banco de Bogota', 456213457865, 2561, '2019-03-31' ),
-('02', 'paola', 'acevedo','Banco caja social',  254861245367, 6543, '2018-07-11'),
-('03', 'michael', 'restrepo','Banco Bancolombia',  546123547852, 4318, '2018-04-20'),
-('04', 'gerardo', 'pardo','Banco Occidente',  542698234561, 5678,'2019-01-01'),
-('05', 'viviana', 'mendez','Banco BBVA',  456213457865, 7645, '2019-02-07');
+('01', 'juan', 'galindo', 'Banco de Bogota', 456213457865, 2561, '2019-03-31','02' ),
+('02', 'paola', 'acevedo','Banco caja social',  254861245367, 6543, '2018-07-11','01'),
+('03', 'michael', 'restrepo','Banco Bancolombia',  546123547852, 4318, '2018-04-20','03'),
+('04', 'gerardo', 'pardo','Banco Occidente',  542698234561, 5678,'2019-01-01','03'),
+('05', 'viviana', 'mendez','Banco BBVA',  456213457865, 7645, '2019-02-07','01');
 
 insert into tarjeta_debito
 values 
-('01', 'tobias', 'vargas','Banco caja social', 4512478634, 8765, '2019-03-31'),
-('02', 'juan pablo', 'ricaute','Banco de Bogota', 4532186547, 7652, '2019-06-24'),
-('03', 'falcao', 'vacca', 'Banco del Occidente', 9645213794, 3789, '2019-08-31'),
-('04', 'yimmy', 'duque','Banco BBVA', 6357219435, 6524, '2019-05-11'),
-('05', 'gabriela', 'rios','Banco Bancolombia',  463185475, 8675, '2019-04-15');
+('01', 'tobias', 'vargas','Banco caja social', 4512478634, 8765, '2019-03-31','03'),
+('02', 'juan pablo', 'ricaute','Banco de Bogota', 4532186547, 7652, '2019-06-24','01'),
+('03', 'falcao', 'vacca', 'Banco del Occidente', 9645213794, 3789, '2019-08-31','02'),
+('04', 'yimmy', 'duque','Banco BBVA', 6357219435, 6524, '2019-05-11','01'),
+('05', 'gabriela', 'rios','Banco Bancolombia',  463185475, 8675, '2019-04-15','02');
 
 insert into giro_empresarial
 values 
-('01', 'Alberto jose', 'vargas', '4512478634', 0318765547, 100.000),
+('01', 'Alberto jose', 'vargas', '4512478634', 0318765547, 100.000,'03');
 
 select * from usuario;
