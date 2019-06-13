@@ -58,6 +58,16 @@ create table tipo_producto
     fk_id_producto int
 );
 
+create table tipo_pago
+(
+    id_tpago int primary key,
+    siglas varchar (5),
+    nombre_tipo_pago VARCHAR(30)  not null
+	/*fk_id_tarjeta_c VARCHAR(10),
+    fk_id_tarjeta_d VARCHAR(10),
+    fk_id_giro VARCHAR(10)*/
+);
+
 create table factura
 (
 	id_factura int auto_increment primary key,
@@ -74,19 +84,9 @@ create table factura
 );
 
 
-create table tipo_pago
-(
-    id_tpago int primary key,
-    siglas varchar (5),
-    nombre_tipo_pago VARCHAR(30)  not null
-	/*fk_id_tarjeta_c VARCHAR(10),
-    fk_id_tarjeta_d VARCHAR(10),
-    fk_id_giro VARCHAR(10)*/
-);
-
 create table tarjeta_credito
 (
-    id_tarjeta_c VARCHAR(10),
+    id_tarjeta_c int,
     nombre VARCHAR(25) not null,
     apellido VARCHAR(25)  not null,
     nombre_banco varchar (25) not null,
@@ -98,7 +98,7 @@ create table tarjeta_credito
 
 create table tarjeta_debito
 (
-    id_tarjeta_d VARCHAR(10),
+    id_tarjeta_d int,
     nombre VARCHAR(25) not null,
     apellido VARCHAR(25) not null,
     nombre_banco varchar (25) not null,
@@ -110,7 +110,7 @@ create table tarjeta_debito
 
 create table giro_empresarial
 (
-    id_giro VARCHAR (10),
+    id_giro int,
     nombre_titular varchar (25)not null,
     apellido_titular varchar (25)not null,
     documento_titular varchar (25)not null,
@@ -123,6 +123,8 @@ create table giro_empresarial
 create table envio
 (
 	id_envio int auto_increment primary key,
+    departamento varchar(25)not null,
+    ciudad varchar (25) not null,
     direccion_envio varchar (30) not null,
     fecha_envio date not null,
     fk_id_factura int

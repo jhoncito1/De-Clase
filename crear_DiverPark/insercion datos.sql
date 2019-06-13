@@ -49,12 +49,21 @@ values
 (01, 'instalacion de parques','2019-03-31', 'cra. 21 sur# 67-79','  ',02),
 (02, 'mantenimiento de parques','2019-03-31', 'cra. 21 sur# 67-79','',03);
 
+
 insert into tipo_pago
 values
 ('01','TC', 'tarjeta credito'),
 ('02','TC', 'tarjeta debito'),
 ('03','GE', 'giro_empresarial');
 
+insert into factura
+values
+(0001, 'p-02','Parques Metalicos', 3, 1805.000, 205.000, 5415.000, 6300.000, '2019-08-31 16:19:59', 01, 02),
+(0002, 'p-02','Parques Metalicos', 1, 1805.000, 205.000, 1805.000, 2001.000, '2020-02-11 17:19:59', 01, 02),
+(0003, 'p-01','Parques de madera', 2, 910.000, 90.000, 1810.000, 2000.000, '2019-08-31 06:19:59', 03, 01),
+(0004, 'p-03','Parques Biosaludables', 2, 950.000, 50.000, 1900.000, 2000.000, '2019-08-31 10:19:59', 03, 03),
+(0005, 'p-01','Parques de madera', 4, 910.000, 90.000, 364000.000, 4000.000, '2019-08-31 10:19:59', 02, 03),
+(0006, 'p-01','Parques de madera', 4, 910.000, 90.000, 364000.000, 4000.000, '2019-08-31 10:19:59', 01, 03);
 
 insert into tarjeta_credito
 values 
@@ -74,6 +83,20 @@ values
 
 insert into giro_empresarial
 values 
-('01', 'Alberto jose', 'vargas', '4512478634', 0318765547, 100.000,'03');
+('01', 'Alberto jose', 'vargas', '4512478634', 0318765547, 100.000,'03'),
+('02', 'Alberto jose', 'vargas', '4512478634', 0318765547, 500.000,'03'),
+('03', 'Alberto jose', 'vargas', '4512478634', 0318765547, 800.000,'03'),
+('04', 'Alberto jose', 'vargas', '4512478634', 0318765547, 300.000,'03'),
+('05', 'Alberto jose', 'vargas', '4512478634', 0318765547, 300.000,'03');
 
-select * from usuario;
+-- truncate table envio;
+insert into envio
+values
+(0001, 'cundinamarca', 'zipaquira', 'cra. 79# 57-86', '2019-08-31', 0001 ),
+(0002, 'Tolima', 'Ibague', 'cra. 65# 42-33', '2019-10-24', 0002 ),
+(0003, 'valle del cauca', 'cali', 'transv. 49# 67-49', '2019-09-01', 0003 ),
+(0004, 'Cordoba', 'Monteria', 'cra. 39# 17-83', '2020-01-01', 0004 ),
+(0005, 'Boyaca', 'Tunja', 'cll. 32# 97-64 sur', '2019-12-31', 0005 ),
+(0006, 'Tolima', 'Melgar', 'calle. 02 este# 67-63', '2019-07-04', 0006 );
+
+select * from envio;
