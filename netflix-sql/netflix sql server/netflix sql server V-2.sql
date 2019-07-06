@@ -57,7 +57,8 @@ create table factura
     fecha datetime not null,
 	fk_id_tpago int,
     fk_id_plan int,
-    fk_numero_documento VARCHAR (25)
+    fk_numero_documento VARCHAR (25),
+	fk2_id_tdocumento VARCHAR(5)
 );
 
 create table tipo_pago
@@ -119,19 +120,6 @@ create table series
     calificacion FLOAT(5)
 );
 
-create table perfil_peliculas
-(
-    fk_id_perfil smallint,
-    fk_id_peliculas VARCHAR (10) not null
-);
-
-create table perfil_series
-
-(
-    fk_id_perfil smallint,
-    fk_id_series VARCHAR (10)
-);
-
 create table categoria
 (
     id_categoria VARCHAR(10) primary key,
@@ -157,6 +145,20 @@ create table peliculas_idioma
     fk_id_idioma int primary key,
     fk_id_peliculas VARCHAR(10)
 );
+
+create table perfil_peliculas
+(
+    fk_id_perfil smallint,
+    fk_id_peliculas VARCHAR (10) not null
+);
+
+create table perfil_series
+
+(
+    fk_id_perfil smallint,
+    fk_id_series VARCHAR (10)
+);
+
 
 create table temporadas
 (
@@ -186,7 +188,7 @@ ALTER TABLE usuario ADD FOREIGN KEY (fk_id_plan)REFERENCES planes (id_plan);
 -- Se definen las  llaves  foraneas de factura;
 ALTER TABLE factura ADD FOREIGN KEY (fk_id_plan)REFERENCES planes(id_plan);
 ALTER TABLE factura ADD FOREIGN KEY (fk_id_tpago)REFERENCES tipo_pago(id_tpago);
-ALTER TABLE factura ADD FOREIGN KEY (fk_numero_documento)REFERENCES usuario(numero_documento);
+ALTER TABLE factura ADD FOREIGN KEY (fk_numero_documento, fk2_id_tdocumento)REFERENCES usuario(numero_documento, fk_id_tdocumento);
 
 -- Se definen las  llaves  foraneas de perfil;
 ALTER TABLE perfil ADD FOREIGN KEY (fk_numero_documento, fk2_id_tdocumento)REFERENCES usuario(numero_documento, fk_id_tdocumento);
