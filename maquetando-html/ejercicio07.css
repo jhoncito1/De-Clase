@@ -18,7 +18,7 @@ body
 
 header
 {
-	background: #fff;
+	background: rgba(173, 166, 166, 0.856);
     overflow: auto;
     border-radius: 10px;
     border:3px solid rgb(23, 17, 59);
@@ -46,7 +46,7 @@ header
 .principal
 {
 	width: 28%;
-    height: 620px;
+    height: 700px;
     border: 3px solid rgb(23, 17, 59);
     box-sizing: border-box;
 	background: #fff;
@@ -64,7 +64,7 @@ header
     border-radius: 10px;
     overflow: auto;
     width: 93%;
-    height: 300px;
+    height: 330px;
     float: right;
     color: rgb(23, 17, 59);
     margin: 10px;
@@ -77,7 +77,7 @@ header
     border-radius: 10px;
     overflow: auto;
     width: 80%;
-    height: 170px;
+    height: 200px;
     float: left;
     color: rgb(23, 17, 59);
     margin: 10px;
@@ -90,7 +90,7 @@ header
     border-radius: 10px;
     overflow: auto;
     width: 68%;
-    height: 620px;
+    height: 700px;
     float: right;
     color: rgb(23, 17, 59);
     margin: 10px;
@@ -100,9 +100,71 @@ header
     font-size: 24px;
 }
 
+
+
+.header2
+{
+    background: rgba(173, 166, 166, 0.856);
+    border:3px solid rgb(23, 17, 59);
+    border-radius: 10px;
+    overflow: auto;
+    width: 97%;
+    height: 50px;
+    float: right;
+    color: rgb(23, 17, 59);
+    margin: 10px;
+    font-size: 18px;
+}
+
+.article01
+{
+    background: rgba(173, 166, 166, 0.856);
+    border:3px solid rgb(23, 17, 59);
+    border-radius: 10px;
+    overflow: auto;
+    width: 97%;
+    height: 210px;
+    float: right;
+    color: rgb(23, 17, 59);
+    margin: 10px;
+    font-size: 16px;
+}
+
+.article02
+{
+    background: rgba(173, 166, 166, 0.856);
+    border:3px solid rgb(23, 17, 59);
+    border-radius: 10px;
+    overflow: auto;
+    width: 97%;
+    height: 210px;
+    float: right;
+    color: rgb(23, 17, 59);
+    margin: 10px;
+    font-size: 16px;
+}
+
+
+.footer2
+{
+    background: rgba(173, 166, 166, 0.856);
+    border:3px solid rgb(23, 17, 59);
+    border-radius: 10px;
+    overflow: auto;
+    width: 97%;
+    height: 50px;
+    float: right;
+    color: rgb(23, 17, 59);
+    margin: 10px;
+    font-size: 18px;
+}
+
+
+
+
 .pie
 {
-	background: #fff;
+	background: rgba(173, 166, 166, 0.856);
 	height:50px;
     margin-left:0;
 	margin-right:0;
