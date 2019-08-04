@@ -1,0 +1,126 @@
+*{
+	margin:10px;
+	padding:0;
+	border:0;
+}
+body
+{
+    overflow: auto;
+    background:rgb(248, 247, 247);
+}
+
+/*.cont1
+{
+    overflow: auto;
+    background:rgb(247, 248, 247);
+    border:4px solid rgb(12, 12, 12);
+}*/
+
+@media screen and (min-width: 320px) and (max-width:768px)
+{
+    .cab1
+{
+    width: 46%;
+    height: 50px;
+    background: orange;
+    float: left;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.cab2
+{
+	width: 46%;
+    height: 50px;
+    background: orange;
+    float: left;
+    margin: 10px;
+    border-radius: 10px;
+}
+}
+
+
+
+
+.principal
+{
+	width: 95%;
+    height: 470px;
+	background: rgb(203, 245, 53);
+    float: left;
+    margin: 10px;
+}
+
+.seccion1
+{
+	width: 29.5%;
+    height: 200px;
+	background: rgb(27, 72, 131);
+	float: left;
+    color: #fff;
+    margin: 10px;
+}
+
+.seccion2
+{
+	width: 29.5%;
+    height: 200px;
+	background: rgb(27, 72, 131);
+	float: left;
+    color: #fff;
+    margin: 10px;
+}
+
+.seccion3
+{
+	width: 29.5%;
+    height: 200px;
+	background: rgb(27, 72, 131);
+	float: left;
+    color: #fff;
+    margin: 10px;
+}
+
+.pie1
+{
+	width: 21%;
+    height: 150px;
+	background: rgb(166, 174, 184);
+	float: left;
+    color: #fff;
+    margin: 10px;
+}
+
+.pie2
+{
+	width: 21%;
+    height: 150px;
+	background: rgb(166, 174, 184);
+	float: left;
+    color: #fff;
+    margin: 10px;
+}
+
+.pie3
+{
+	width: 21%;
+    height: 150px;
+	background: rgb(166, 174, 184);
+	float: left;
+    color: #fff;
+    margin: 10px;
+}
+.pie4
+{
+	width: 21%;
+    height: 150px;
+	background: rgb(166, 174, 184);
+	float: left;
+    color: #fff;
+    margin: 10px;
+}
+
+@media screen and (min-width: 320px) and (max-width:768px)
+{
+
+}
