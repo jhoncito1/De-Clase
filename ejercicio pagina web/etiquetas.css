@@ -1,0 +1,92 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	background: #313D52;
+}
+
+.cabecera
+{
+    background: url("img4.jpg");
+
+    overflow: auto;
+    border-radius: 10px;
+    color: rgb(61, 45, 45);
+    text-align: left;
+    box-sizing: border-box;
+    margin: 5px;
+    font-size: 18px;
+}
+
+
+
+
+.cont1
+{
+    overflow: auto;
+    background:rgb(248, 247, 247);
+    border:3px solid rgb(12, 12, 12); 
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+
+.anuncios
+{
+    border:3px solid rgb(230, 100, 48);
+    border-radius: 10px;
+    overflow: auto;
+    width: 20%;
+    height: 300px;
+    float: left;
+    color: rgb(207, 93, 26);
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background: #fff;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+.principal
+{
+	width: 80%;
+    height: 620px;
+    border: 3px solid rgb(16, 8, 58);
+    box-sizing: border-box;
+	background: #fff;
+	border-radius: 10px;
+	float: right;
+    color: rgb(16, 8, 58);
+    overflow: auto;
+    padding: 15px;
+}
+
+
+
+
+.pie
+{
+	background: rgb(214, 223, 240);
+	height:130px;
+    margin-left:0;
+	margin-right:0;
+    float:left;
+    border:3px solid rgb(16, 8, 58);
+    border-radius: 10px;
+    width: 99%;
+    margin: 5px;
+    color: rgb(16, 8, 58);
+}
+@media screen and (min-width: 400px ) and (max-width: 750px){
+    .anuncios{width: 100%;}
+    .principal{width: 100%;}
+    .pie {width: 100%;}
+}
