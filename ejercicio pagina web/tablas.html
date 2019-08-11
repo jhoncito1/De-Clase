@@ -9,17 +9,26 @@
 </head>
 <body>
     
-    <script type="text/javascript">
-        for (var a= 1; a <= 10; a++) {
-            document.write ("<table border='1px solid black'><caption>Tabla del "+a+"</captio><tr><th>Multiplo</th><th>Operador</th><th>Multiplicador</th><th>=</th><th>Resultado</th></tr>");
-            var r;
-            for (var i = 0; i <= 20; i++) {
-                r=a*i;
-                document.write ("<tr><td>"+a+"</td><td>*</td><td>"+i,"</td><td>=</td><td>",r,"</td></tr>");
+
+    <section>
+
+        <script type="text/javascript">
+            for (var a= 1; a <= 10; a++) 
+            {
+                document.write ("<div><table border='1px solid black'><caption><h2>Tabla del "
+                    +a+"</h2></captio><tr><th>Multiplo</th><th>Operador</th><th>Multiplicador</th><th>=</th><th>Resultado</th></tr>");
+                var r;
+            
+                for (var i = 0; i <= 20; i++) 
+                {
+                    r=a*i;
+                    document.write ("<tr><td>"+a+"</td><td>*</td><td>"+i,"</td><td>=</td><td>",r,"</td></tr>");
+                }
+                document.write ("</table> </div><br><br>");
             }
-            document.write ("</table> <br>");
-        }
-        </script>
+            </script>
+    </section>
+    
 
 </body>
 </html>

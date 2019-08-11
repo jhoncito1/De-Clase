@@ -3,7 +3,8 @@ header{
 	width: 100%;
 }
 
-.navegacion{
+.navegacion
+{
     float: left;
     width: 100%;
     display: flex;
@@ -22,7 +23,7 @@ header{
     
 }
 
-.menu li  a{
+.menu li a{
 	display: block;
 	padding: 15px 20px;
 	color: #fff;
