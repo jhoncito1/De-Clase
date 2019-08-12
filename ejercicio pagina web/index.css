@@ -59,11 +59,10 @@ background-size: cover;
 }
 .principal
 {
-    background: rgb(216, 208, 208);
+    background: #fff;
 	width: 75%;
     height: 850px;
     box-sizing: border-box;
-	background: #fff;
 	border-radius: 10px;
     color: rgb(16, 8, 58);
     overflow: auto;
@@ -119,6 +118,10 @@ h1{
     font-size: 25px
 }
 
+#parrafo3
+{
+    text-align: center;
+}
 
 
 
