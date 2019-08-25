@@ -19,7 +19,7 @@
         $num3 = $_POST['n3'];
 
 
-        echo "La tabla del " . $num1 . " desde ".$num2. "  hasta " . $num3 .  " son: <br>";
+        echo "<h3>La tabla del " . $num1 . " desde ".$num2. "  hasta " . $num3 .  " son:</h3> <br>";
         echo "<table border='1px solid'>
               <tr>
                    <th>tabla</th> <th>Operador</th> <th>Multiplicador</th> <th>Igualdad</th> <th>Resultado</th>
