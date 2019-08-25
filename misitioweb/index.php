@@ -31,7 +31,8 @@
         </form>
 
         <?php
-        if (isset($_POST['boton'])) {
+        if (isset($_POST['boton'])) 
+        {
             $num1 = $_POST['num1'];
             $num2 = $_POST['num2'];
             $num3 = $_POST['num3'];
@@ -39,8 +40,10 @@
 
             echo "los multiplos de " . $num3 . " hasta " . $num2 .  " son: <br>";
 
-            for ($i = $num1; $i <= $num2; $i++) {
-                if ($i % $num3 == 0) {
+            for ($i = $num1; $i <= $num2; $i++) 
+            {
+                if ($i % $num3 == 0) 
+                {
                     $num[] = $i;
                 }
             }

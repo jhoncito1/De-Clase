@@ -28,75 +28,61 @@ function print_input($datos)
         <p>asise</p>
     </aside>
     <main>
+        <div class="multiplos">
+            <h3>Multiplos</h3>
+            <form method="POST" action="multiplos.php">
+                <label>numero inicial</label>
+                <input type="number" name="num1">
+                <label>numero final </label>
+                <input type="number" name="num2">
+                <label>multiplo</label>
+                <input type="number" name="num3">
+                <input type="submit" name="multiplo" value="multiplo">
+            </form>
+        </div>
 
-        <form method="POST" action="index.php">
-
-
-            <input type="number" step="any" name="n1" required>
-
-            <input type="number" name="n2"><br>
-
-            <input type="radio" name="operacion" value=1>Suma <br>
-            <input type="radio" name="operacion" value=2>Resta <br>
-            <input type="radio" name="operacion" value=3>Multiplicacion <br>
-
-            <input type="radio" name="operacion" value=4>Division <br>
-            <input type="radio" name="operacion" value=5>raiz <br>
-            <input type="radio" name="operacion" value=6>potencia <br>
-
-            <input type="submit" name="enviar" value="ENVIAR">
-
-        </form>
-
-        <?php
-        if (isset($_POST['enviar'])) 
-        {
-            if (empty($_POST['n2']) or empty($_POST['operacion'])) 
-            {
-                echo "todas las casillas deben tener valor y elegir operacion";
-            } 
-            else 
-            {
-                $num1 = $_POST['n1'];
-                $num2 = $_POST['n2'];
+        <br><br>
+        <h3>Tablas Multiplicar</h3>
+        <div class="tablas">
+            <label>Tabla del:</label>
+            <form method="POST" action="tabla.php">
+                <input type="number" name="n1" required>
+                <label>Desde:</label>
+                <input type="number" name="n2" required>
+                <label>Hasta:</label>
+                <input type="number" name="n3" required>
+                <input type="submit" name="tabla" value="tabla">
+            </form>
+        </div>
 
 
-                switch ($_POST['operacion']) 
-                {
-                    case 1:
-                        $result = $num1 + $num2;
-                        echo "<br> El resultado de " . $num1 . " + " . $num2 . " = " . $result;
-                        break;
-                    case 2:
-                        $result = $num1 - $num2;
-                        echo "<br> El resultado de " . $num1 . " - " . $num2 . " = " . $result;
-                        break;
-                    case 3:
-                        $result = $num1 * $num2;
-                        echo "<br> El resultado de " . $num1 . " * " . $num2 . " = " . $result;
-                        break;
-                    case 4:
-                        $result = number_format(( $num1 / $num2),2,",",".");
-                        echo "<br> El resultado de " . $num1 . " / " . $num2 . " = " . $result;
-                        break;
-                    case 5:
-                        echo "<br> el resultado es " .pow($num1,1/$num2);
-                        break;
-                    case 6:
-                        echo "<br> el resultado es " .pow($num1, $num2);
-                    break;  
-                        break;
-
-                    default:
-                        echo "selecciona una opcion";
-                        break;
-                }
-            }
-        }
-        ?>
+        <br /><br />
+        <h3>Calculadora</h3>
+        <div class="calculadora">
+            <form method="POST" action="calculadora.php">
+                <input type="number" step="any" name="n1" required>
+                <input type="number" name="n2"><br>
+                <input type="radio" name="operacion" value=1>Suma <br>
+                <input type="radio" name="operacion" value=2>Resta <br>
+                <input type="radio" name="operacion" value=3>Multiplicacion <br>
+                <input type="radio" name="operacion" value=4>Division <br>
+                <input type="radio" name="operacion" value=5>raiz <br>
+                <input type="radio" name="operacion" value=6>potencia <br>
+                <input type="submit" name="enviar" value="ENVIAR">
+            </form>
+        </div>
 
 
 
+        <div class="udc">
+            <h3>udc</h3>
+            <label>Tabla del:</label>
+            <form method="POST" action="udc.html">
+                <input type="number" name="n1" required>
+                <label>Desde:</label>
+                <input type="submit" name="envi" value="envi">
+            </form>
+        </div>
 
 
 

@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body
+{
+background-image: url("img/fondo5.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+section
+{
+    
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+    justify-content: space-around;
+
+}
+ div
+ {
+     border-radius: 10px;
+ }
+
+
+
+
+#menu #item:hover #desple{
+    display: block;
+}
+td{
+    
+    width: 70px;
+
+}
+
+table{
+    background: rgb(173, 173, 243);
+    text-align: center;
+    color: rgb(7, 7, 54);
+    font-size: 35px;
+    width: 70%;
+}
+
+h3
+{
+    color: rgb(10, 8, 8);
+    font-size: 45px;
+
+}
