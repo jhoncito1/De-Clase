@@ -13,8 +13,19 @@
             <h2>Header</h2>
         </header>
         <main class="contenido">
-            <p>
-                .....
+            <p> ...
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nisi quae vero pariatur beatae blanditiis, laborum quia
+                aut incidunt dolores eos ullam necessitatibus labore
+                enim. Qui vitae voluptas dolorem! Non, mollitia. <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nisi quae vero pariatur beatae blanditiis, laborum quia
+                aut incidunt dolores eos ullam necessitatibus labore
+                enim. Qui vitae voluptas dolorem! Non, mollitia. br <br> <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nisi quae vero pariatur beatae blanditiis, laborum quia
+                aut incidunt dolores eos ullam necessitatibus labore
+                enim. Qui vitae voluptas dolorem! Non, mollitia.
             </p>
         </main>
         <aside class="sidebar">
@@ -23,7 +34,7 @@
         <div class="widget-1">
             <h3>witget 1</h3>
         </div>
-        <div class="witget-2">
+        <div class="widget-2">
             <h3>witget 2</h3>
         </div>
         <footer class="footer">
