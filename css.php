@@ -17,7 +17,7 @@
         <main class="contenido">
             <h1><br> GENERALIDADES CSS</h1><br>
             <p id="htmls">
-                <img src="img/css.png" alt="">
+                <img src="img/css2.png" alt="">
             </p><br>
             <h2>¿Qué es CSS? <br><br></h2>
             <p id="parrafo1">

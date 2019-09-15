@@ -9,19 +9,19 @@
 </head>
 
 <body>
+    <header class="header">
+        <?php
+        include('menu.php');
+        ?>
+    </header>
     <?php
-    if (isset($_POST['enviar'])) 
-    {
-        if (empty($_POST['n2']) or empty($_POST['operacion'])) 
-        {
+    if (isset($_POST['enviar'])) {
+        if (empty($_POST['n2']) or empty($_POST['operacion'])) {
             echo "todas las casillas deben tener valor y elegir operacion";
-        } 
-        else 
-        {
+        } else {
             $num1 = $_POST['n1'];
             $num2 = $_POST['n2'];
-            switch ($_POST['operacion']) 
-            {
+            switch ($_POST['operacion']) {
                 case 1:
                     $result = $num1 + $num2;
                     echo "<br> El resultado de " . $num1 . " + " . $num2 . " = " . $result;

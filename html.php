@@ -12,19 +12,17 @@
 <body>
     <header class="header">
         <?php
-                include('menu.php');
-                ?>
+        include('menu.php');
+        ?>
     </header>
     <div class="cont1">
-        
+
 
         <aside class="anuncios">
             <p>
                 <h3>anuncios</h3>
             </p>
-            <iframe width="200px" height="170px" src="https://www.youtube.com/embed/ivmHpFX_oew" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe><br>
+            <iframe width="200px" height="170px" src="https://www.youtube.com/embed/ivmHpFX_oew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
             <img src="img/vino.jpg" alt="" width="100%" height="500px"><br>
             <p id="ppub"> Lorem ipsum dolor consequuntur? Quasi nihil veniam qui libero praesentium ratione,
                 necessitatibus adipisci quo repudiandae nam. Consequuntur beatae dolorum assumenda illum ad consectetur

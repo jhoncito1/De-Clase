@@ -11,6 +11,12 @@
 </head>
 
 <body>
+
+    <header class="header">
+        <?php
+        include('menu.php');
+        ?>
+    </header>
     <?php
     if (isset($_POST['multiplo'])) {
         $num1 = $_POST['num1'];

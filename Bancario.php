@@ -23,8 +23,8 @@ form>div {text-align:center;}
 <h1>Cálculo de hipotecas/préstamos</h1>
 <form action="<?php echo $_SERVER["PHP_SELF"]?>" method="POST">
 	<div>
-		<span>Importe :</span>
-		<span><input type="text" name="importe" maxlength=9 value="<?php echo $_POST["importe"]?>"></span>
+		<span>Cantidad Solicitud :</span>
+		<span><input type="text" name="importe" maxlength=9 value="<?php echo $_POST["importe"]?>" require></span>
 	</div>
 	<div>
 		<span>Años :</span>
@@ -86,5 +86,3 @@ if($_POST["importe"] && $_POST["anos"] && $_POST["interes"])
 }
 ?>
  
-</body>
-</html>
