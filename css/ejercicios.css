@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(112, 108, 108);
+    color: #000;
+    font-family: sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1500px;
+    margin: 2px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "header header header"
+                         "contenido contenido contenido"
+                         "widget-1 widget-1 widget-2"
+                         "footer footer footer";
+                         
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer{
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+
+}
+.contenedor .header{
+    background: #12203E;
+    color: #fff;
+    grid-area: header;
+}
+
+ .contenedor .contenido{
+     grid-area: contenido;
+
+ }
+ }
+ .contenedor .widget-1,
+ .contenedor .widget-2{
+     background: aquamarine;
+     height: 100px;
+     text-align: center;
+     display: flex;
+     align-items:  center;
+     justify-content:  center;
+ }
+
+.contenedor .widget-1{
+    grid-area: widget-1;
+}
+
+.contenedor .widget-2{
+    grid-area: widget-2;
+}
+
+ .contenedor .footer{
+     background: #12203E;
+     color: #fff;
+     grid-area: footer;
+ }
+
+ @media screen  and (max-width: 768px){
+     .contenedor{
+         background: rgb(9, 32, 14);
+    grid-template-areas: "header header header"
+                         "contenido contenido contenido"
+                         "widget-1 widget-1 widget-2"
+                         "footer footer footer";
+                         
+     }
+ }
+
+
+ @media screen  and (max-width: 324px){
+     .contenedor{
+         background: rgb(8, 8, 8);
+    grid-template-areas: "header header header"
+                         "contenido contenido contenido"
+                         "widget-1 widget-1 widget-1"
+                         "widget-2 widget-2 widget-2"
+                         "footer footer footer";
+                         
+     }
+ }

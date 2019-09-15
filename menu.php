@@ -19,11 +19,11 @@
                 <span>&#9776</span>
             </div>
             <div class="enlaces uno" id="enlaces">
-                <a href="#" class="active">Inicio</a>
-                <a href="html.html">HTML 5</a>
-                <a href="#">CSS 3</a>
-                <a href="../php.php">PHP</a>
-                <a href="#">EJERCICIOS</a>
+                <a href="index.php" class="active">Inicio</a>
+                <a href="html.php">HTML5</a>
+                <a href="css.php">CSS3</a>
+                <a href="php.php">PHP</a>
+                <a href="ejercicios.php">EJERCICIOS</a>
             </div>
         </nav>
     </header>

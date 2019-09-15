@@ -22,7 +22,11 @@ function print_input($datos)
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <?php
+        include('menu.php');
+        ?>
+    </header>
     <nav></nav>
     <aside>
         <p>asise</p>
