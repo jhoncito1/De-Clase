@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="generalidades.css">
+    <link rel="stylesheet" href="css/html.css">
 </head>
 
 <body>
+
+<div class="contenedor">
+
     <header class="header">
         <?php
         include('menu.php');
@@ -89,6 +92,8 @@
             <h2>&lt;&lt;HTML5&gt;&gt;</h2>
         </p>
     </footer>
+
+    </div>
 </body>
 
 </html>

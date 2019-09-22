@@ -13,7 +13,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="img/logo.png" alt="">
+                <img src="img/j.png" alt="">
             </div>
             <div class="icono" id="icono">
                 <span>&#9776</span>
