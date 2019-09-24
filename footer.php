@@ -29,23 +29,23 @@
                     <h1>Redes Sociales</h1>
 
                     <div class="row">
-                        <img src="icon/facebook.png">
+                        <a href="http://facebook.com" target="_blank" >
+                        <img src="icon/facebook.png"></a>
                         <label>Siguenos en Facebook</label>
                     </div>
                     <div class="row">
-                        <img src="icon/twitter.png">
+                        <a href="http://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <img src="icon/twitter.png"></a>
                         <label>Siguenos en Twitter</label>
                     </div>
                     <div class="row">
-                        <img src="icon/instagram.png">
+                        <a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <img src="icon/instagram.png"></a>
                         <label>Siguenos en Instagram</label>
                     </div>
                     <div class="row">
-                        <img src="icon/google-plus.png">
-                        <label>Siguenos en Google Plus</label>
-                    </div>
-                    <div class="row">
-                        <img src="icon/pinterest.png">
+                        <a href="http://pinterest.com" target="_blank" rel="noopener noreferrer">
+                        <img src="icon/pinterest.png"></a>
                         <label>Siguenos en Pinteres</label>
                     </div>
 
@@ -58,20 +58,20 @@
 
                     <div class="row2">
                         <img src="icon/house.png">
-                        <label>La Romana, 
-                        Republica Dominicana
-                        Manuel del Cabral
+                        <label>Colombia <br>
+                        Bogota DC,<br>
+                        Alqueria la fragua <br>
                         Casa # 27</label>
                     </div>
 
                     <div class="row2">
                         <img src="icon/smartphone.png">
-                        <label>+1-829-395-2064</label>
+                        <label>+57 3209988852</label>
                     </div>
 
                     <div class="row2">
                         <img src="icon/contact.png">
-                         <label>Cristiancedano1030@gmail.com</label>
+                         <label>jjchavez44@misena.edu.co</label>
                     </div>
 
                 </div>
@@ -83,11 +83,11 @@
         <div class="container-footer">
                <div class="footer">
                     <div class="copyright">
-                        © 2017 Todos los Derechos Reservados | <a href="">Magtimus</a>
+                        © 2019 Todos los Derechos Reservados | <a href="">Jhon Chavez</a>
                     </div>
 
                     <div class="information">
-                        <a href="">Informacion Compañia</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y Condiciones</a>
+                        <a href="">Informacion Compañia</a> | <a href="">Privacidad y Politica</a> | <a href="">Terminos y Condiciones</a>
                     </div>
                 </div>
 

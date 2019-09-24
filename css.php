@@ -54,7 +54,9 @@
             <h3>witget 2</h3>
         </div>
         <footer class="footer">
-            <h3>pie de pagina</h3>
+            <?php
+                include('footer.php');
+                ?>
         </footer>
     </div>
 </body>

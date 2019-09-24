@@ -82,7 +82,9 @@
 
 
         <footer class="footer">
-            <h3>pie de pagina</h3>
+        <?php
+            include('footer.php');
+        ?>
         </footer>
     </div>
 </body>

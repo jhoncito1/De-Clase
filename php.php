@@ -87,9 +87,13 @@ function print_input($datos)
             </div>
 
 
-
+            <footer class="footer">
+            <?php
+                include('footer.php');
+            ?>
+        </footer>
+        
         </main>
-        <footer></footer>
     </div>
 </body>
 

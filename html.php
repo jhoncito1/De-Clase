@@ -73,9 +73,9 @@
 
 
         <footer class="footer">
-            <p>
-                <h2>&lt;&lt;HTML5&gt;&gt;</h2>
-            </p>
+            <?php
+                include('footer.php');
+            ?>
         </footer>
 
     </div>
