@@ -11,32 +11,19 @@
 
 <body>
 
-<div class="contenedor">
+    <div class="contenedor">
 
-    <header class="header">
-        <?php
-        include('menu.php');
-        ?>
-    </header>
-    <div class="cont1">
+        <header class="header">
+            <?php
+            include('menu.php');
+            ?>
+        </header>
+        
+        <main class="contenido">
 
-
-        <aside class="anuncios">
-            <p>
-                <h3>anuncios</h3>
-            </p>
-            <iframe width="200px" height="170px" src="https://www.youtube.com/embed/ivmHpFX_oew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-            <img src="img/vino.jpg" alt="" width="100%" height="500px"><br>
-            <p id="ppub"> Lorem ipsum dolor consequuntur? Quasi nihil veniam qui libero praesentium ratione,
-                necessitatibus adipisci quo repudiandae nam. Consequuntur beatae dolorum assumenda illum ad consectetur
-                necessitatibus?</p>
-
-        </aside>
-
-        <section class="principal">
             <h1>GENERALIDADES HTML5</h1><br>
             <p id="htmls">
-                <img src="img/html-5.png" alt="">
+            <img src="img/html-5.jpg" alt="">
             </p><br>
             <p id="parrafo1">
                 HTML - Generalidades El HTML (HyperText Markup Language o, libremente traducido, lenguaje de enlaces
@@ -71,27 +58,25 @@
                 totalmente negativo.
             </p><br>
 
-        </section>
+        </main>
 
-        <section class="publicidad">
-            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, facilis consectetur ratione
-                exercitationem deserunt velit asperiores rem quas dolorum quaerat magnam amet soluta aliquid impedit
-                voluptas harum fugit itaque accusantium. <br>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, libero ex error facere similique
-                pariatur deserunt eligendi optio possimus sequi ipsum in quas doloremque tenetur voluptatem labore
-                aliquid minima sed. <br>
-                <img src="img/publimotos.jpg" alt="">
+            <section class="sidebar">
+                <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, facilis consectetur ratione
+                    exercitationem deserunt velit asperiores rem quas dolorum quaerat magnam amet soluta aliquid impedit
+                    voluptas harum fugit itaque accusantium. <br>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, libero ex error facere similique
+                    pariatur deserunt eligendi optio possimus sequi ipsum in quas doloremque tenetur voluptatem labore
+                    aliquid minima sed. <br>
+                    <img src="img/publimotos.jpg" alt="">
+                </p>
+            </section>
+
+
+        <footer class="footer">
+            <p>
+                <h2>&lt;&lt;HTML5&gt;&gt;</h2>
             </p>
-        </section>
-
-    </div>
-
-
-    <footer class="pie">
-        <p>
-            <h2>&lt;&lt;HTML5&gt;&gt;</h2>
-        </p>
-    </footer>
+        </footer>
 
     </div>
 </body>

@@ -13,13 +13,13 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="img/j.png" alt="">
+                <img src="img/lg.png" alt=""  >
             </div>
             <div class="icono" id="icono">
                 <span>&#9776</span>
             </div>
             <div class="enlaces uno" id="enlaces">
-                <a href="index.php" class="active">Inicio</a>
+                <a href="index.php" class="active">INICIO</a>
                 <a href="html.php">HTML5</a>
                 <a href="css.php">CSS3</a>
                 <a href="php.php">PHP</a>
