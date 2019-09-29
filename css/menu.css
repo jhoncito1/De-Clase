@@ -52,17 +52,17 @@ header nav {
     border-bottom: 2px solid coral;
 }
 
-nav .logo {
-    height: 30px;
-    background: #fff;
-    margin-left: 80px;
+ .logo {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 200px;
+
 }
 
-nav .logo img {
-    object-fit: cover;
-    height: inherit;
-    align-items: center;
-}
+
 
 header .textos {
     text-align: center;

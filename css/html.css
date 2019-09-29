@@ -48,6 +48,7 @@ body{
 {
     width: 100%;
 background: #fff;
+padding: 3em;
 
     grid-area: contenido;
 }
@@ -57,7 +58,7 @@ background: #fff;
 {
     overflow: auto;
     float: left;
-    color: aliceblue;
+    color: rgb(9, 34, 56);
     padding: 1em;
     box-sizing: border-box;
     grid-area: sidebar;
@@ -68,7 +69,7 @@ background: #fff;
 {
     border-radius: 10px;
     overflow: auto;
-    color: aliceblue;
+    color: rgb(4, 29, 51);
     box-sizing:  border-box;
     float: right;
     padding: 1em;
@@ -112,7 +113,30 @@ h1{
 }
 
 
+h1 {
+    margin: 15px 100px 0px 480px;
+    color: white;
+   }
+   table,th, td {
+       border: 1px solid white;
+       border-collapse: collapse;
+   }
+   th, td {
+       padding: 10px;
+   }
+.divtable{
+    display:flex;
+    justify-content: center;
 
+}
+   table{
+       width: 900px;
+       background-color: chartreuse;
+   }
+
+   th {
+       text-align: center;
+   }
 
 
 

@@ -75,7 +75,7 @@
                 <form method="POST" action="udc.html">
                     <input type="number" name="n1" required>
                     <label>Desde:</label>
-                    <input type="submit" name="envi" value="envi">
+                    <input type="submit" name="enviar" value="enviar">
                 </form>
             </div>
         </div>

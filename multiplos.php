@@ -28,7 +28,7 @@
                 $num[] = $i;
             }
         }
-        print_r($num);
+        print_r($num); 
     }
     ?>
 </body>

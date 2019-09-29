@@ -50,8 +50,8 @@ if($_POST["importe"] && $_POST["anos"] && $_POST["interes"])
 	$interes=($interes/100)/12;
 	$m=($deuda*$interes*(pow((1+$interes),($anos*12))))/((pow((1+$interes),($anos*12)))-1);
  
-	echo "<div>Capital Inicial: ".number_format($deuda,2,",",".")." €";
-	echo "<br>Cuota a pagar mensualmente: ".number_format($m,2,",",".")." €</div>";
+	echo "<div>Capital Inicial: ".number_format($deuda,2,",",".")." $";
+	echo "<br>Cuota a pagar mensualmente: ".number_format($m,2,",",".")." $</div>";
 	?>
 	<table border=1 cellpadding=5 cellspacing=0>
 		<tr>
