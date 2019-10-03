@@ -26,7 +26,7 @@
                 <li><a href="#">HTML</a>
                     <ul class="submenu">
                         <li><a href="generalidades.html">Generalidades</a></li>
-                        <li><a href="etiquetas.html">Etiquetas html</a></li>
+                        <li><a href="etiquetas.php">Etiquetas html</a></li>
                         <li><a href="mapa.html">Mapa conceptual</a></li>
                         <li><a href="editores.html">Editores</a></li>
                     </ul>
