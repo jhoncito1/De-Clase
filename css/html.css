@@ -46,11 +46,11 @@ body{
 
 .contenedor .contenido
 {
-    width: 100%;
+width: 100%;
 background: #fff;
 padding: 3em;
 
-    grid-area: contenido;
+grid-area: contenido;
 }
 
 
@@ -92,9 +92,9 @@ padding: 3em;
     grid-area: footer;
 }
 
-h1{
+.html-t{
     font-size: 60px;
-    color: rgb(245, 116, 11);
+    color: rgb(19, 17, 107);
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
@@ -113,10 +113,7 @@ h1{
 }
 
 
-h1 {
-    margin: 15px 100px 0px 480px;
-    color: white;
-   }
+
    table,th, td {
        border: 1px solid white;
        border-collapse: collapse;

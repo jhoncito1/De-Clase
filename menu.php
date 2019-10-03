@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="menu">
             <div class="logo">
                 <img src="img/lg.png" >
             </div>

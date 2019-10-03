@@ -24,15 +24,15 @@ form>div {text-align:center;}
 <form action="<?php echo $_SERVER["PHP_SELF"]?>" method="POST">
 	<div>
 		<span>Cantidad Solicitud :</span>
-		<span><input type="text" name="importe" maxlength=9 value="<?php echo $_POST["importe"]?>" require></span>
+		<span><input type="text" name="importe" maxlength=9 value="" require></span>
 	</div>
 	<div>
 		<span>Años :</span>
-		<span><input type="text" name="anos" maxlength=2 value="<?php echo $_POST["anos"]?>"></span>
+		<span><input type="text" name="anos" maxlength=2 value=""></span>
 	</div>
 	<div>
 		<span>Interés :</span>
-		<span><input type="text" name="interes" maxlength=9 value="<?php echo $_POST["interes"]?>"></span>
+		<span><input type="text" name="interes" maxlength=9 value=""></span>
 	</div>
 	<div>
 		<p><input type="submit" value="Calcular"></p>
@@ -81,7 +81,7 @@ if($_POST["importe"] && $_POST["anos"] && $_POST["interes"])
 		}
 		?>
 	</table>
-	Pago total de intereses : <?php echo number_format($totalint,2,",",".")?> €
+	Pago total de intereses : <?php echo number_format($totalint,2,",",".")?> $
 	<?php
 }
 ?>

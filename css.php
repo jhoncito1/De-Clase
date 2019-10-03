@@ -15,8 +15,11 @@
                 ?>
         </header>
         <main class="contenido">
+        <?php
+                include('menu2.php');
+            ?>
             <h1><br> GENERALIDADES CSS</h1><br>
-            <p id="htmls">
+            <p id="">
                 <img src="img/css2.png" alt="">
             </p><br>
             <h2>¿Qué es CSS? <br><br></h2>
@@ -41,9 +44,6 @@
         </main>
         <aside class="sidebar">
             <h3>sidebar</h3>
-
-            
-
 
         </aside>
         <div class="widget-1">

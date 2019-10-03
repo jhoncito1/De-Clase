@@ -22,78 +22,41 @@ function print_input($datos)
 </head>
 
 <body>
-    <div class="contenedor">
-    <header class="header">
+<div class="contenedor">
+        <header class="header">
             <?php
-            include('menu.php');
+                include('menu.php');
             ?>
         </header>
-        
-        <main>
-            <div class="multiplos">
-                <h3>Multiplos</h3>
-                <form method="POST" action="multiplos.php">
-                    <label>numero inicial</label>
-                    <input type="number" name="num1">
-                    <label>numero final </label>
-                    <input type="number" name="num2">
-                    <label>multiplo</label>
-                    <input type="number" name="num3">
-                    <input type="submit" name="multiplo" value="multiplo">
-                </form>
-            </div>
 
-            <br><br>
-            <h3>Tablas Multiplicar</h3>
-            <div class="tablas">
-                <label>Tabla del:</label>
-                <form method="POST" action="tabla.php">
-                    <input type="number" name="n1" required>
-                    <label>Desde:</label>
-                    <input type="number" name="n2" required>
-                    <label>Hasta:</label>
-                    <input type="number" name="n3" required>
-                    <input type="submit" name="tabla" value="tabla">
-                </form>
-            </div>
-
-
-            <br /><br />
-            <h3>Calculadora</h3>
-            <div class="calculadora">
-                <form method="POST" action="calculadora.php">
-                    <input type="number" step="any" name="n1" required>
-                    <input type="number" name="n2"><br>
-                    <input type="radio" name="operacion" value=1>Suma <br>
-                    <input type="radio" name="operacion" value=2>Resta <br>
-                    <input type="radio" name="operacion" value=3>Multiplicacion <br>
-                    <input type="radio" name="operacion" value=4>Division <br>
-                    <input type="radio" name="operacion" value=5>raiz <br>
-                    <input type="radio" name="operacion" value=6>potencia <br>
-                    <input type="submit" name="enviar" value="ENVIAR">
-                </form>
-            </div>
-
-
-
-            <div class="udc">
-                <h3>udc</h3>
-                <label>Tabla del:</label>
-                <form method="POST" action="udc.html">
-                    <input type="number" name="n1" required>
-                    <label>Desde:</label>
-                    <input type="submit" name="envi" value="envi">
-                </form>
-            </div>
-
-
-            <footer class="footer">
+        <main class="contenido">
             <?php
-                include('footer.php');
+                include('menu2.php');
             ?>
-        </footer>
+            <br> <br> <br>
+            <h1>Generalidades PHP</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quod praesentium at dolores eius omnis possimus officia ducimus doloribus adipisci voluptate, ratione perferendis. Illo soluta vitae tempora quaerat. Molestias, est?
         
         </main>
+        <aside class="sidebar">
+            <h3>sidebar</h3>
+
+            
+
+
+        </aside>
+        <div class="widget-1">
+            <h3>witget 1</h3>
+            
+        </div>
+        <div class="widget-2">
+            <h3>witget 2</h3>
+        </div>
+        <footer class="footer">
+            <?php
+                include('footer.php');
+                ?>
+        </footer>
     </div>
 </body>
 

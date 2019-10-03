@@ -20,8 +20,12 @@
         </header>
         
         <main class="contenido">
+        <?php
+            include('menu2.php');
+            ?>
+            <br>  <br>  <br>
 
-            <h1>GENERALIDADES HTML5</h1><br>
+            <h1 class="html-t">GENERALIDADES HTML5</h1><br>
             <p id="htmls">
             <img src="img/html-5.jpg" alt="">
             </p><br>
