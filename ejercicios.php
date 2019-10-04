@@ -17,7 +17,18 @@
             ?>
         </header>
         <main class="contenido">
-            <h3>Calculadora</h3>
+
+            <?php
+            include('bancario.php');
+            ?>
+        </main>
+
+        <aside class="sidebar">
+        
+        </aside>
+
+        <div class="widget-1">
+        <h3>Calculadora</h3>
             <div class="calculadora">
                 <form method="POST" action="calculadora.php">
                     <input type="number" step="any" name="n1" required>
@@ -31,16 +42,9 @@
                     <input type="submit" name="enviar" value="ENVIAR">
                 </form>
             </div>
-        </main>
+        </div>
 
-        <aside class="sidebar">
-            <?php
-            include('bancario.php');
-            ?>
-
-        </aside>
-
-        <div class="widget-1">
+        <div class="widget-2">
             <div class="multiplos">
                 <h3>Multiplos</h3>
                 <form method="POST" action="multiplos.php">
@@ -54,7 +58,7 @@
                 </form>
             </div>
         </div>
-        <div class="widget-2">
+        <div class="widget-3">
             <h3>Tablas Multiplicar</h3>
             <div class="tablas">
                 <label>Tabla del:</label>
@@ -68,16 +72,50 @@
                 </form>
             </div>
         </div>
-        <div class="widget-3">
-            <div class="udc">
-                <h3>udc</h3>
-                <label>Tabla del:</label>
-                <form method="POST" action="udc.html">
-                    <input type="number" name="n1" required>
-                    <label>Desde:</label>
-                    <input type="submit" name="enviar" value="enviar">
-                </form>
-            </div>
+        <div class="widget-4">
+        <h3>UNIDADES</h3>
+        <form  method="POST" class="multiplos">
+            INGRESA EL NUMERO: <input type="number" name="num" class="form-control">
+            <br>
+            <input type="submit" name="Boton" value="ENVIAR" class="btn btn-primary btn-lg btn-block">
+        </form>
+        <br>
+        <?php
+        if(!empty($_POST["num"]))
+        {
+            $num=$_POST["num"];
+            if($num <1000){
+               
+                echo "LA CENTENA DE ".$num." ES: ";
+                $num=$_POST["num"]/100;
+                echo intval($num)."<br>";
+                
+                echo "LA DECENA DE ".$_POST["num"]." ES: ";
+                $decena2=$_POST["num"]%100;
+                $decena1=$decena2/10;
+                echo intval($decena1)."<br>";
+                
+                echo "LA UNIDAD DE ".$_POST["num"]." ES: ";
+                $unidad=$decena2%10;
+                echo $unidad;
+            }
+            else{
+                echo "INGRESE UN NUMERO MENOR A MIL";
+            }
+        }
+        ?>
+        </div>
+
+        <div class="widget-5">
+        <?php
+            include('fibonacci.php');
+            ?>
+        </div>
+
+        <div class="widget-6">
+        <?php
+            include('factorial.php');
+            ?>
         </div>
 
 

@@ -23,7 +23,7 @@
                 <a href="html.php">HTML5</a>
                 <a href="css.php">CSS3</a>
                 <a href="php.php">PHP</a>
-                <a href="ejercicios.php">EJERCICIOS</a>
+                <a href="editores.php">EDITORES</a>
             </div>
         </nav>
     </header>

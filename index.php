@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sitio css</title>
+    <title>Jhon Chavez</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/slader.css">
 </head>
@@ -22,22 +22,24 @@
             
             <div class="slider">
                 <div class="slider-container">
-                    <figure aria-label="Texto imagen 1">
-                        <img src="img/img-1.jpg" alt="img-1" class="img-responsive">
+                    <figure aria-label="Jhon Chavez">
+                        <img src="img/jho1.jpg" alt="img-1" class="img-responsive">
                     </figure>
-                    <figure aria-label="Texto imagen 2">
-                        <img src="img/img-2.jpg" alt="img-2" class="img-responsive">
+                    <figure aria-label="Viajero">
+                        <img src="img/jho2.jpg" alt="img-2" class="img-responsive">
                     </figure>
-                    <figure aria-label="Texto imagen 3">
-                        <img src="img/img-3.jpg" alt="img-3" class="img-responsive">
+                    <figure aria-label="Programador">
+                        <img src="img/programmin.png" alt="img-3" class="img-responsive">
                     </figure>
-                    <figure aria-label="Texto imagen 4">
-                        <img src="img/img-4.jpg" alt="img-4" class="img-responsive">
+                    <figure aria-label="Persona">
+                        <img src="img/jho3.jpg" alt="img-4" class="img-responsive">
                     </figure>
                 </div>
             </div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam officia non quas dolorum natus nobis, amet excepturi ratione quod repudiandae unde quisquam distinctio, quis numquam minus velit, veritatis hic blanditiis.
+                    <h4>Jhon Jainer Chavez</h4> 
+                    <h4>Aprendiz: ADSI</h4> 
+                    <h4>Ficha: 1786182</h4> 
                 </p>
         </main>
         <aside class="sidebar">

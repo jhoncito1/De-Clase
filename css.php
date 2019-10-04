@@ -42,17 +42,7 @@
             
             <br>
         </main>
-        <aside class="sidebar">
-            <h3>sidebar</h3>
-
-        </aside>
-        <div class="widget-1">
-            <h3>witget 1</h3>
-            
-        </div>
-        <div class="widget-2">
-            <h3>witget 2</h3>
-        </div>
+       
         <footer class="footer">
             <?php
                 include('footer.php');

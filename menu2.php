@@ -25,22 +25,25 @@
 
                 <li><a href="#">HTML</a>
                     <ul class="submenu">
-                        <li><a href="generalidades.html">Generalidades</a></li>
-                        <li><a href="../etiquetas.php">Etiquetas html</a></li>
-                        <li><a href="../mapa.php">Mapa conceptual</a></li>
-                        <li><a href="editores.html">Editores</a></li>
+                        <li><a href="html.php">Generalidades</a></li>
+                        <li><a href="etiquetas.php">Etiquetas html</a></li>
+                        <li><a href="mapa.php">Mapa conceptual</a></li>
                     </ul>
                 </li>
 
                 <li><a href="#">CSS</a>
                     <ul class="submenu">
-                        <li><a href="css-gen.html">Generalidades css</a></li>
-                        <li><a href="reglas.html">reglas css</a></li>
+                        <li><a href="css.php">Generalidades css</a></li>
+                        <li><a href="float.php">float</a></li>
+                        <li><a href="position.php">Position</a></li>
+                        <li><a href="flexbox.php">Flexbox</a></li>
+                        <li><a href="grid.php">Grid</a></li>
                     </ul>
                 </li>
 
                 <li><a href="#">PHP</a>
                     <ul class="submenu">
+                    <li><a href="php.php">Generalidades</a></li>
                     <li><a href="ejercicios.php">EJERCICIOS</a></li>
                     </ul>
                 </li>

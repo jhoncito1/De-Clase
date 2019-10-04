@@ -128,7 +128,7 @@ grid-area: contenido;
 }
    table{
        width: 900px;
-       background-color: chartreuse;
+       background-color: rgb(73, 179, 240);
    }
 
    th {
