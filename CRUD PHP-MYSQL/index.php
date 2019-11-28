@@ -1,7 +1,7 @@
 <?php
 	include_once 'conexion.php';
 
-	$sentencia_select=$con->prepare('SELECT *FROM clientes ORDER BY id DESC');
+	$sentencia_select =$con->prepare('SELECT *FROM clientes ORDER BY id aSC');
 	$sentencia_select->execute();
 	$resultado=$sentencia_select->fetchAll();
 
@@ -31,7 +31,7 @@
 </head>
 <body>
 	<div class="contenedor">
-		<h2>CRUD EN PHP CON MYSQL</h2>
+		<h2>CRUD CON PHP </h2>
 		<div class="barra__buscador">
 			<form action="" class="formulario" method="post">
 				<input type="text" name="buscar" placeholder="buscar nombre o apellidos" 

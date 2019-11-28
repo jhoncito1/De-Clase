@@ -1,5 +1,5 @@
 <?php
-	$database="crud";
+	$database="tienda";
 	$user='root';
 	$password='';
 
