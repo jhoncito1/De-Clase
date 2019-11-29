@@ -1,6 +1,6 @@
 <?php
     include_once 'conexion.php';
-    if (isset($_POS['guardar'])) {
+    if (isset($_POSt['guardar'])) {
         $nommre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
         $identificacion = $_POST['identificacion'];

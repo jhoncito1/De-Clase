@@ -2,28 +2,26 @@
 	include_once 'conexion.php';
 	if(isset($_GET['id'])){
 		$id=(int) $_GET['id'];
-		$buscar_id=$con->prepare('SELECT * FROM clientes WHERE id=:id LIMIT 1');
-		$buscar_id->execute(array(
-			':id'=>$id
-		));
+		$buscar_id=$conexion->prepare('SELECT * FROM personas WHERE id=:id LIMIT 1');
+		$buscar_id->execute(array(':id'=>$id));
 		$resultado=$buscar_id->fetch();
 	}else{
 		header('Location: index.php');
 	}
 	if(isset($_POST['guardar'])){
 		$nombre=$_POST['nombre'];
-        $apellidos=$_POST['apellidos'];
+        $apellido=$_POST['apellido'];
         $ciudad=$_POST['identificacion'];
 		$telefono=$_POST['telefono'];
 		$correo=$_POST['correo'];
 		$id=(int) $_GET['id'];
-		if(!empty($nombre) && !empty($apellidos) && !empty($identificacion) && !empty($telefono) && !empty($correo) ){
+		if(!empty($nombre) && !empty($apellido) && !empty($identificacion) && !empty($telefono) && !empty($correo) ){
 			if(!filter_var($correo,FILTER_VALIDATE_EMAIL)){
 				echo "<script> alert('Correo no valido');</script>";
 			}else{
-				$consulta_update=$con->prepare(' UPDATE personas SET  
+				$consulta_update=$conexion->prepare(' UPDATE personas SET  
 					nombre=:nombre,
-					apellidos=:apellidos,
+					apellido=:apellido,
                     identificacion = ;identificacion,
 					telefono=:telefono,
 					correo=:correo
@@ -31,7 +29,7 @@
 				);
 				$consulta_update->execute(array(
 					':nombre' =>$nombre,
-                    ':apellidos' =>$apellidos,
+                    ':apellido' =>$apellido,
                     ':identificacion' =>$identificacion,
 					':telefono' =>$telefono,
 					':correo' =>$correo,
