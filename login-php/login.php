@@ -19,10 +19,9 @@
       $_SESSION['user_id'] = $results['id'];
       header("Location: /php-login");
     } else {
-      $message = 'Sorry, those credentials do not match';
+      $message = 'Error, usuario y contraseña no coinciden';
     }
   }
-
 ?>
 
 <!DOCTYPE html>
@@ -44,8 +43,8 @@
     <span>or <a href="signup.php">SignUp</a></span>
 
     <form action="login.php" method="POST">
-      <input name="email" type="text" placeholder="Enter your email">
-      <input name="password" type="password" placeholder="Enter your Password">
+      <input name="email" type="text" placeholder="ingrese@usuario.com">
+      <input name="password" type="password" placeholder="********">
       <input type="submit" value="Submit">
     </form>
   </body>
