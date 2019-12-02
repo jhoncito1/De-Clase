@@ -2,23 +2,24 @@
 
   session_start();
 
-  if (isset($_SESSION['user_id'])) {
+  if (isset($_SESSION['personas_id'])) {
     header('Location: /php-login');
   }
-  require 'database.php';
+  require 'conexion.php';
 
-  if (!empty($_POST['email']) && !empty($_POST['password'])) {
-    $records = $conn->prepare('SELECT id, email, password FROM users WHERE email = :email');
-    $records->bindParam(':email', $_POST['email']);
+  if (!empty($_POST['correo']) && !empty($_POST['password'])) {
+    $records = $conexion->prepare('SELECT id, nombre, correo, password FROM personas WHERE correo = :correo');
+    $records->bindParam(':correo', $_POST['correo']);
     $records->execute();
-    $results = $records->fetch(PDO::FETCH_ASSOC);
-
+    $resultado = $records->fetch(PDO::FETCH_ASSOC);
+    
     $message = '';
 
-    if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
-      $_SESSION['user_id'] = $results['id'];
+    if (count($resultado) > 0 && password_verify($_POST['password'], $resultado['password'])) {
+      $_SESSION['personas_id'] = $resultado['id'];
       header("Location: /php-login");
-    } else {
+    } 
+    else {
       $message = 'Error, usuario y contraseña no coinciden';
     }
   }
@@ -39,13 +40,13 @@
       <p> <?= $message ?></p>
     <?php endif; ?>
 
-    <h1>Login</h1>
-    <span>or <a href="signup.php">SignUp</a></span>
+    <h1>Iniciar Sesion</h1>
+    <span>o <a href="signup.php">Registrarse</a></span>
 
     <form action="login.php" method="POST">
-      <input name="email" type="text" placeholder="ingrese@usuario.com">
-      <input name="password" type="password" placeholder="********">
-      <input type="submit" value="Submit">
+      <input name="correo" type="text" placeholder="ingrese@usuario.com">
+      <input name="password" type="password" placeholder="Contraseña">
+      <input type="submit" value="Enviar">
     </form>
   </body>
 </html>

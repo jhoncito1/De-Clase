@@ -5,10 +5,11 @@ $user = 'root';
 $password = '';
 
 try {
-  $con=new PDO('mysql:host=localhost;dbname='.$database,$user,$password);
+  $conexion=new PDO('mysql:host=localhost;dbname='.$database,$user,$password);
   //$con = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
 } catch (PDOException $e) {
-  die('Connection Failed: ' . $e->getMessage());
+  die('Error de conexion: ' . $e->getMessage());
 }
 
 ?>
+ 
