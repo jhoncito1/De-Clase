@@ -3,16 +3,16 @@
 
   require 'conexion.php';
 
-  if (isset($_SESSION['personas_id'])) {
-    $records = $conexion->prepare('SELECT id, nombre, correo, password FROM personas WHERE id = :id');
-    $records->bindParam(':id', $_SESSION['personas_id']);
+  if (isset($_SESSION['user_id'])) {
+    $records = $conexion->prepare('SELECT * password FROM personas WHERE id = :id');
+    $records->bindParam(':id', $_SESSION['user_id']);
     $records->execute();
     $resultado = $records->fetch(PDO::FETCH_ASSOC);
 
-    $usuario = null;
+    $user = null;
 
     if (count($resultado) > 0) {
-      $usuario = $resultado;
+      $user = $resultado;
     }
   }
 ?>
@@ -28,7 +28,8 @@
   <body>
     <?php require 'partials/header.php' ?>
 
-    <?php if(!empty($usuario)): ?>
+    <?php if(!empty($_SESSION)): ?> 
+      <br>Bienvenido. <?= $user['nombre']; ?> 
       <br> Has iniciado sesión correctamente
       <a href="logout.php">Logout</a>
     <?php else: ?>
