@@ -18,7 +18,7 @@
       
         $_SESSION['user_id'] = $resultado['id'];
         
-        header("Location: index.php");
+        header("Location: update.php");
       } 
       else {
         $message = 'Error, usuario y contraseña no coinciden';

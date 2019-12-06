@@ -31,9 +31,9 @@
     <?php if(!empty($_SESSION)): ?> 
       <br>Bienvenido. <?= $user['nombre']; ?> 
       <br> Has iniciado sesión correctamente
-      <a href="logout.php">Logout</a>
+      <a href="logout.php">Salir</a>
     <?php else: ?>
-      <h1>Ingrese o registrese</h1>
+      <h1>Ingrese o registrese</h1> 
 
       <a href="login.php">Iniciar sesion</a> o
       <a href="signup.php">Registrarse</a>
