@@ -55,8 +55,8 @@
                     <td><?php echo $filas ['identificacion']?></td>
                     <td><?php echo $filas ['telefono']?></td>
                     <td><?php echo $filas ['correo']?></td>
-                    <td><a href="update.php?id = <?php echo filas['id']; ?>" class="btn_update">Editar</a></td>
-                    <td><a href="delete.php?id = <?php echo filas['id']; ?>" class="btn_delete">Eliminar</a></td>
+                    <td><a href="update.php?id = <?php echo $filas['id']; ?>" class="btn_update">Editar</a></td>
+                    <td><a href="delete.php?id = <?php echo $filas['id']; ?>" class="btn_delete">Eliminar</a></td>
                 </tr>
                 <?php endforeach ?>
         </table>

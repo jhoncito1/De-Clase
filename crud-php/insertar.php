@@ -7,8 +7,8 @@
         $telefono = $_POST['telefono'];
         $correo = $_POST['correo'];
 
-        if (!empty(nombre) && !empty(apellido) && !empty(identificacion) && !empty(telefono) && !empty(correo)) {
-            if (!filter_var ($correo, filter_validate_email)) {
+        if (!empty($nombre) && !empty($apellido) && !empty($identificacion) && !empty($telefono) && !empty($correo)) {
+            if (!filter_var ($correo, FILTER_VALIDATE_EMAIL)) {
                 echo "<script>alert('correo no valido');</script>";
             }
             else {
