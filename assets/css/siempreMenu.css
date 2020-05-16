@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+}
+
+ .navbar {
+    background-color: #fff;
+    background-color: transparent; 
+    width: 90%;
+    margin: auto;
+}
+/*.nav-link{color: #000;}
+.nav-link:hover {color: rgb(21, 76, 112);}
+
+.logo-brand{
+    min-width: 160px;
+    max-width: 180px;
+    color: #000;
+}
+.navbar-toggler {
+    font-size: 40px;
+    
+}
+.navbar-toggler:focus {outline: none;}
+
+#hero {
+    background-image: url('../assets/img/parque1.jpg');
+    background-size: cover;
+    padding-top: 90px;
+    min-height: 700px;
+    color: #330707;
+} */
+
+/* .carousel-item {
+    padding-left: 5em;
+    padding-right: 5em;
+    width: 100%;
+    height: 500px;
+} */
