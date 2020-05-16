@@ -1,0 +1,48 @@
+*{
+	margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body
+{
+    width: 80%;
+    background: gainsboro;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 3em 1em auto 3em;
+    grid-template-areas: 
+     "h h"
+     "n n" 
+     "a m" 
+     "f f"
+}
+header
+{
+    grid-area: h;
+    background: red;
+}
+
+nav
+{
+    grid-area: n;
+    background: blue;
+}
+
+aside
+ {
+     grid-area: a;
+     background: rgb(12, 156, 36);
+ }
+
+main
+{
+    grid-area: m;
+    background:  rgb(140, 226, 42);
+}
+ footer
+ {
+     grid-area: f;
+     background: chocolate;
+ }
