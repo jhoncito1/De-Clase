@@ -1,0 +1,137 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	background: #313D52;
+}
+
+.cabecera
+{
+    background: url("img/img4.jpg");
+    overflow: auto;
+    border-radius: 10px;
+    color: rgb(61, 45, 45);
+    text-align: left;
+    box-sizing: border-box;
+    margin: 5px;
+    font-size: 18px;
+}
+
+
+
+
+.cont1
+{
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+
+.anuncios
+{
+    background: rgb(3, 1, 1);
+    overflow: auto;
+    width: 15%;
+    height: 1000px;
+    float: left;
+    color: aliceblue;
+    padding: 1em;
+    box-sizing: border-box;
+}
+#ppub
+{
+    color: green;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+
+}
+
+#hi{
+    color: blue;
+}
+
+
+.principal
+{
+	width: 75%;
+    height: 1000px;
+    box-sizing: border-box;
+	background: #fff;
+	border-radius: 10px;
+    overflow: auto;
+    padding: 3em;
+    color: #000;
+    float: left;
+}
+
+table,th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+}
+
+table{
+    width: 95%;
+    background-color: rgb(37, 140, 180);
+}
+
+th {
+    text-align: left;
+}
+
+
+
+
+
+
+
+.publicidad
+{
+    background: rgb(57, 172, 143);
+    border-radius: 10px;
+    overflow: auto;
+    width: 10%;
+    height: 1000px;
+    color: aliceblue;
+    box-sizing:  border-box;
+    float: right;
+    padding: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+.pie
+{
+	background: rgb(1, 2, 5);
+    margin-left:0;
+	margin-right:0;
+    border:3px solid rgb(16, 8, 58);
+    border-radius: 10px;
+    width: 100%;
+    color: rgb(236, 81, 9);
+    text-align: center;
+}
+@media screen and (min-width: 400px ) and (max-width: 750px){
+    .anuncios{width: 100%;}
+    .principal{width: 100%;}
+    .pie {width: 100%;}
+}
+
+
+
+

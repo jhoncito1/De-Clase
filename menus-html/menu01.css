@@ -1,0 +1,69 @@
+*{
+	margin:10px;
+	padding:0;
+	border:0;
+}
+body
+{
+    overflow: auto;
+    background:rgb(248, 247, 247);
+}
+
+/* For mobile phones: 
+[class*="cab"]
+{
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) 
+    
+{
+    .cab1
+    {
+        width: 46%;
+        height: 50px;
+        background: orange;
+        float: left;
+        margin: 10px;
+        border-radius: 10px;
+    }
+    
+    .cab2
+    {
+        width: 46%;
+        height: 50px;
+        background: orange;
+        float: left;
+        margin: 10px;
+        border-radius: 10px;
+    }
+}*/
+    .cab1
+{
+    width: 48%;
+    height: 50px;
+    background: orange;
+    float: left;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.cab2
+{
+	width: 48%;
+    height: 50px;
+    background: orange;
+    float: left;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width:768px)
+{
+    [class*="cab"] {
+        width: 100%;
+      }
+}
+/* For mobile phones: */
